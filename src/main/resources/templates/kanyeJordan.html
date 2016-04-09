@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+
+
+<html>
+    <head>
+        <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+        <style>
+            .tweet {
+                list-style-type: none;
+
+            }
+            .tweet img {
+                display: inline-block;
+
+                width: 100px;
+                vertical-align: top;
+                padding-top: 20px;
+
+            }
+            .tweet h3 {
+                width: 650px;
+            }
+
+            .tweets {
+                margin-top: 55px;
+            }
+
+            .kanye, .lizlemon {
+                width: 300px;
+            }
+
+            .plus,.equal {
+                font-size: 120px;
+            }
+            .equal {
+                margin-left: 75px;
+            }
+
+            .tracy {
+                margin-top: 15px;
+            }
+            .main {
+                padding-top: 50px;
+            }
+        </style>
+    </head>
+    <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="brand">Kanye Jordan</span>
+            </div>
+        </div>
+    </div>
+
+        <div class="container main">
+           <img class="kanye" src="/img/kanye.jpg"/> <span class="plus">+</span>
+            <img class="lizlemon" src="/img/lizlemon.jpg"/>
+            <span class="equal">=</span>
+            <img class="tracy" src="/img/tracy.png"/>
+            <ul class="tweets">
+                {{#tweets}}
+                <li class="tweet">
+                    <img style="display:inline-block;" src="{{user.profile_image_url}}" />
+                    <h3 style="display:inline-block;">{{text}}</h3>
+                </li>
+                {{/tweets}}
+            </ul>
+        </div>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+
+</html>
